@@ -1,0 +1,4 @@
+__pycache__
+pretrained
+*.npy
+*.mp4

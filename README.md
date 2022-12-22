@@ -16,4 +16,4 @@ To put scores to videos, run this
 cd ..
 python3 process_videos.py
 ```
-Note that the input videos are saved at `/I3D_extractor/demovideos` while their scores are at `/RTFM/scores` and the final videos are at `./out_videos`.
+Note that the input videos are saved at `/I3D_extractor/demovideos` while their scores are at `/RTFM/scores` and the final videos are at `./out_videos`.# Test
