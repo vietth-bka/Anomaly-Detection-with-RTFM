@@ -1,5 +1,5 @@
 This repo is heavily inspired from [***RTFM***](https://github.com/tianyu0207/RTFM) and [***I3D_extractor***](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet).
-We added file `extract_features_v2.py` to `I3D_extractor` to actively generate the video features which are used for training `RTFM`. Thu xem co loi ko nha :))
+We added file `extract_features_v2.py` to `I3D_extractor` to actively generate the video features which are used for training `RTFM`. 
 
 ## Inference an input video 
 
