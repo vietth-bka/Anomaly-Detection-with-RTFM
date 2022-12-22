@@ -3,7 +3,7 @@
 ### Prepare features at [***I3D_extractor***](./I3D_extractor/)
 
 ### Infer video at [***RTFM***](./RTFM)
-To infer video, firstly you need to save this checkpoint `/media/v100/DATA4/thviet/AnomalyDetection/RTFM/ckpt/rtfm-NAdam-i3d_v2.pkl` to folder `ckpt`.
+To infer video, firstly you need to save this [***checkpoint***](https://drive.google.com/file/d/1ocvSevEtlXdajpILMQp5ub9954E3AE7B/view?usp=share_link) to folder `ckpt`.
 After getting `.npy` file of embedded video at `../I3D_extractor/output`, run this to get the score-per-frames.
 ```shell
 cd RTFM
