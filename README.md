@@ -1,11 +1,12 @@
 This repo is heavily inspired from [***RTFM***](https://github.com/tianyu0207/RTFM) and [***I3D_extractor***](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet).
 We added file `extract_features_v2.py` to `I3D_extractor` to actively generate the video features which is used for training `RTFM`.
-# Detect Anomaly
+
+# Inference with an input video 
 
 ### Prepare features at [***I3D_extractor***](./I3D_extractor/)
 
-### Infer video at [***RTFM***](./RTFM)
-To infer video, firstly you need to save this [***checkpoint***](https://drive.google.com/file/d/1ocvSevEtlXdajpILMQp5ub9954E3AE7B/view?usp=share_link) to folder `ckpt`.
+### Get score-per-frames with [***RTFM***](./RTFM)
+To infer video, firstly you might need to save this [***checkpoint***](https://drive.google.com/file/d/1ocvSevEtlXdajpILMQp5ub9954E3AE7B/view?usp=share_link) (or you can train it by yourself) to folder `ckpt`.
 After getting `.npy` file of embedded video at `../I3D_extractor/output`, run this to get the score-per-frames.
 ```shell
 cd RTFM
