@@ -1,4 +1,6 @@
-# Detection Anomal
+This repo is heavily inspired from [***RTFM***](https://github.com/tianyu0207/RTFM) and [***I3D_extractor***](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet).
+We added file `extract_features_v2.py` to `I3D_extractor` to actively generate the video features which is used for training `RTFM`.
+# Detect Anomaly
 
 ### Prepare features at [***I3D_extractor***](./I3D_extractor/)
 
@@ -16,4 +18,4 @@ To put scores to videos, run this
 cd ..
 python3 process_videos.py
 ```
-Note that the input videos are saved at `/I3D_extractor/demovideos` while their scores are at `/RTFM/scores` and the final videos are at `./out_videos`.# Test
+Note that the input videos are saved at `/I3D_extractor/demovideos` while their scores are at `/RTFM/scores` and the final videos are at `./out_videos`.
