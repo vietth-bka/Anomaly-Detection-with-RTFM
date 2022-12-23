@@ -2,7 +2,7 @@ This repo is heavily inspired from [RTFM](https://github.com/tianyu0207/RTFM) an
 ## Training RTFM 
 Authors of `RTFM` seem to have no intentions to publish the implementation of the input processing so this makes it impossible to reproduce the result of the paper.
 
-## Inference an input video 
+## Inference with RTFM
 
 ### Prepare features at [I3D_extractor](./I3D_extractor/)
 We added file `extract_features_v2.py` to `I3D_extractor` then proactively generate the video features used for training `RTFM` with [UCF-Crime](https://www.crcv.ucf.edu/research/real-world-anomaly-detection-in-surveillance-videos/).
