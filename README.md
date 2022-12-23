@@ -1,5 +1,6 @@
-This repo is heavily inspired from [RTFM](https://github.com/tianyu0207/RTFM) and [I3D_extractor](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet).
-We added file `extract_features_v2.py` to `I3D_extractor` to actively generate the video features which are used for training `RTFM`. 
+This repo is heavily inspired from [RTFM](https://github.com/tianyu0207/RTFM) and [I3D_extractor](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet). 
+## Training RTFM 
+Authors of `RTFM` seems to have no intention to publish the implementation of the input processing so this makes it impossible to reproduce the result of the paper. We added file `extract_features_v2.py` to `I3D_extractor` then proactively generate the video features used for training `RTFM`.
 
 ## Inference an input video 
 
@@ -20,3 +21,7 @@ cd ..
 python3 process_videos.py --input 'path/to/input-video' --scores './RTFM/scores/scores_file_name.npy' --out 'path/to/video-out'
 ```
 Note that the input videos are saved at `/I3D_extractor/demovideos` while their scores are at `/RTFM/scores` and the final videos are at `./out_videos`.
+
+### To-do list
+- [x] Release the extract-feature code
+- [] Publish the training results
