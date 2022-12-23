@@ -176,6 +176,6 @@ if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
     pred = test_video(infer_loader, model, args, device, 'my model')
-    np.save(args.scores_file, pred)
+    np.save(args.save_scores, pred)
     print('Infer done my model ..')
 

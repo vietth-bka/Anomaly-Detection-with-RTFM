@@ -10,13 +10,13 @@ To infer video, firstly you might need to save this [checkpoint](https://drive.g
 After getting `.npy` file of embedded video at `../I3D_extractor/output`, run this to get the score-per-frames.
 ```shell
 cd RTFM
-python3 infer.py --video_feats 'npy/path' --scores_file 'score-per-frames/path'
+python3 infer.py --video_feats 'npy/path' --save_scores './RTFM/scores/scores_file_name.npy'
 ```
 
 ### Process videos
 To put scores to videos, run this
 ```shell
 cd ..
-python3 process_videos.py
+python3 process_videos.py --input 'path/to/input-video' --scores './RTFM/scores/scores_file_name.npy' --out 'path/to/video-out'
 ```
 Note that the input videos are saved at `/I3D_extractor/demovideos` while their scores are at `/RTFM/scores` and the final videos are at `./out_videos`.
