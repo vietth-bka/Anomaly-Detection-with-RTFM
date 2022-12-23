@@ -1,6 +1,6 @@
 This repo is heavily inspired from [RTFM](https://github.com/tianyu0207/RTFM) and [I3D_extractor](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet).
 ## Training RTFM 
-Authors of `RTFM` seem to have no intentions to publish the implementation of the input processing so this makes it impossible to reproduce the result of the paper. This repos includes all you need to train and infer anomaly detection with `RTFM`.
+Authors of `RTFM` seem to have no intentions to publish the implementation of the input processing so this makes it impossible to reproduce the result of the paper. This repository includes all you need to train and infer anomaly detection with `RTFM`.
 
 ## Inference with RTFM
 
