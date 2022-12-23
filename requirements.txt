@@ -1,0 +1,13 @@
+ffmpeg==1.4
+fire==0.3.1
+matplotlib==3.2.2
+natsort==8.1.0
+numpy==1.23.2
+opencv_python_headless==4.5.2.52
+Pillow==9.3.0
+scikit_learn==1.2.0
+scipy==1.4.1
+torch==1.7.0
+torchvision==0.8.1
+tqdm==4.47.0
+visdom==0.1.8.9

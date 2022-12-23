@@ -33,54 +33,59 @@ def putText(image, anomal):
     
     return image
 
-# Read the video from specified path
-cam = cv2.VideoCapture("/I3D_extractor/demovideos/NVR-VietDuy_ori.mp4")
-scores = np.load('/RTFM/scores/scores_VietDuy_NAdam.npy')
-print('scores:', len(scores))
 
-if (cam.isOpened() == False): 
-    print("Error reading video file")
+def gen_video(input='./I3D_extractor/demovideos/NVR-VietDuy_ori.mp4', 
+              scores='./RTFM/scores/scores_VietDuy_NAdam.npy', 
+              out='./out_videos/test.mp4'):
+    """
+    Read the video from specified path
+    """    
+    cam = cv2.VideoCapture(input)    
+    scores = np.load(scores)
+    print('scores:', len(scores))
 
-frame_width = int(cam.get(3))
-frame_height = int(cam.get(4))
-# frame
-size = (frame_width, frame_height)
-result = cv2.VideoWriter('out_videos/VietDuy_NAdam.mp4', 
-                         cv2.VideoWriter_fourcc(*'MJPG'),
-                         10, size)
-currentframe = 0
+    if (cam.isOpened() == False): 
+        print("Error reading video file")
 
-while(True):
-	
-	# reading from frame
-    ret,frame = cam.read()
+    frame_width = int(cam.get(3))
+    frame_height = int(cam.get(4))
+    # frame
+    size = (frame_width, frame_height)
+    result = cv2.VideoWriter(out, 
+                            cv2.VideoWriter_fourcc(*'MJPG'),
+                            10, size)
+    currentframe = 0
 
-    if ret:
-        currentframe += 1
-        # if video is still left continue creating images
-        name = './data/frame' + str(currentframe) + '.jpg'
-        print ('Creating...' + name, frame.shape)
-        print(scores[currentframe])
+    while(True):
+        
+        # reading from frame
+        ret,frame = cam.read()
 
-        if scores[currentframe] >= 0.85:
-            print('true')
-            frame = putText(frame, True)
+        if ret:
+            currentframe += 1
+            # if video is still left continue creating images
+            name = './data/frame' + str(currentframe) + '.jpg'
+            print ('Creating...' + name, frame.shape)
+            print(scores[currentframe])
+
+            if scores[currentframe] >= 0.85:
+                print('true')
+                frame = putText(frame, True)
+            else:
+                print('false')
+                frame = putText(frame, False)
+            result.write(frame)
         else:
-            print('false')
-            frame = putText(frame, False)
-        result.write(frame)
-        # writing the extracted images
-        # cv2.imwrite('out_videos/test.jpg', frame)
-        # break
+            break
 
-        # increasing counter so that it will
-        # show how many frames are created
-    else:
-        break
+    print(currentframe)
 
-print(currentframe)
+    # Release all space and windows once done
+    result.release()
+    cam.release()
+    cv2.destroyAllWindows()
 
-# Release all space and windows once done
-result.release()
-cam.release()
-cv2.destroyAllWindows()
+if __name__ == "__main__":
+    import fire
+    fire.Fire(gen_video)
+    
