@@ -19,4 +19,5 @@ parser.add_argument('--plot-freq', type=int, default=10, help='frequency of plot
 parser.add_argument('--max-epoch', type=int, default=15000, help='maximum iteration to train (default: 100)')
 parser.add_argument('--optim', type=str, default='SGD', help='optimizer')
 parser.add_argument('--video_feats', type=str, default='../I3D_extractor/output/NVR-VietDuy_ori.npy', help='path to the video features')
-parser.add_argument('--save_scores', type=str, default='scores/score_VietDuy_ori.npy', help='path to the video scores')
+parser.add_argument('--input_video', type=str, default='path/to/input-video')
+parser.add_argument('--output_video', type=str, default='out_videos/test.mp4')

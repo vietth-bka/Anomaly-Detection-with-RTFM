@@ -9,6 +9,7 @@ from model import Model
 from dataset import Dataset, Infer
 from config import *
 from scipy.io import loadmat
+from process_videos import gen_video
 
 def test(dataloader, model, args, viz, device):
     with torch.no_grad():
@@ -176,6 +177,8 @@ if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
     pred = test_video(infer_loader, model, args, device, 'my model')
-    np.save(args.save_scores, pred)
+    np.save('./scores/scores.npy', pred)
     print('Infer done my model ..')
+    gen_video(input=args.input_video, scores=pred, out=args.output_video)
+    print('Video is saved at', args.output_video)
 
