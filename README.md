@@ -14,7 +14,7 @@ After getting `.npy` file of embedded video at `../I3D_extractor/output`, run th
 cd RTFM
 python3 infer.py --video_feats 'npy/path' --input_video 'path/to/input-video' --output_video 'path/to/output-video'
 ```
-### Parameters
+#### Parameters
 <pre>
 --video_feats:      path of the extracted features
 --input_video:      path of the input video
