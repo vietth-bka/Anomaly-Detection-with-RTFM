@@ -9,10 +9,10 @@ We added file `extract_features_v2.py` to `I3D_extractor` then proactively gener
 
 ### Get scores-per-frame with [RTFM](./RTFM) and process the video
 To infer video, firstly you might need to save this [checkpoint](https://drive.google.com/file/d/1ocvSevEtlXdajpILMQp5ub9954E3AE7B/view?usp=share_link) (or you can train it by yourself) to folder `ckpt`.
-After getting `.npy` file of embedded video at `../I3D_extractor/output`, run this to get the scores-per-frame.
+After getting `.npy` file of embedded video saved at `../I3D_extractor/output`, run this to get the scores-per-frame.
 ```shell
 cd RTFM
-python3 infer.py --video_feats 'npy/path' --input_video 'path/to/input-video' --output_video 'path/to/output-video'
+python3 infer.py --video_feats 'path/to/npy' --input_video 'path/to/input-video' --output_video 'path/to/output-video'
 ```
 #### Parameters
 <pre>
