@@ -16,7 +16,7 @@ python3 infer.py --video_feats 'path/to/npy' --input_video 'path/to/input-video'
 ```
 #### Parameters
 <pre>
---video_feats:      path of the extracted features
+--video_feats:      path of the extracted video features
 --input_video:      path of the input video
 --output_video:     path of the output video
 </pre>
