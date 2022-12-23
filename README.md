@@ -1,10 +1,11 @@
 This repo is heavily inspired from [RTFM](https://github.com/tianyu0207/RTFM) and [I3D_extractor](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet). 
 ## Training RTFM 
-Authors of `RTFM` seems to have no intention to publish the implementation of the input processing so this makes it impossible to reproduce the result of the paper. We added file `extract_features_v2.py` to `I3D_extractor` then proactively generate the video features used for training `RTFM`.
+Authors of `RTFM` seem to have no intentions to publish the implementation of the input processing so this makes it impossible to reproduce the result of the paper.
 
 ## Inference an input video 
 
 ### Prepare features at [I3D_extractor](./I3D_extractor/)
+We added file `extract_features_v2.py` to `I3D_extractor` then proactively generate the video features used for training `RTFM`.
 
 ### Get score-per-frames with [RTFM](./RTFM)
 To infer video, firstly you might need to save this [checkpoint](https://drive.google.com/file/d/1ocvSevEtlXdajpILMQp5ub9954E3AE7B/view?usp=share_link) (or you can train it by yourself) to folder `ckpt`.
