@@ -25,4 +25,4 @@ Note that the input videos are saved at `/I3D_extractor/demovideos` while their 
 
 ### To-do list
 - [x] Release the extract-feature code
-- [] Publish the training results
+- [ ] Publish the training results
