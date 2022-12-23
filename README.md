@@ -10,7 +10,7 @@ To infer video, firstly you might need to save this [***checkpoint***](https://d
 After getting `.npy` file of embedded video at `../I3D_extractor/output`, run this to get the score-per-frames.
 ```shell
 cd RTFM
-python3 infer.py --video_feats 'npy-path' --scores_file 'score-per-frames'
+python3 infer.py --video_feats 'npy/path' --scores_file 'score-per-frames'
 ```
 
 ### Process videos
