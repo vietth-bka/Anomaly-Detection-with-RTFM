@@ -51,7 +51,7 @@ if __name__ == '__main__':
     model = model.to(device)
     pred = test_video(infer_loader, model, args, device, 'my model')
     np.save('./scores/scores.npy', pred)
-    print('Infer done my model ..')
+    print('Infer done my model. Processing video ..')
     gen_video(input=args.input_video, scores=pred, out=args.output_video)
     print('Video is saved at', args.output_video)
 
